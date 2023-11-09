@@ -9,8 +9,8 @@
   <div id="lightningLocator"></div>
   
   <script>
-    const appName = 'c:retailerApplication';
-    const componentName = 'c:lwcDemo';
+    /*const appName = 'c:retailerApplication';
+    const componentName = 'c:lwcRetailerApplication';
     const lightningEndpoint = 'https://acimacredit--partial.sandbox.my.site.com/vforcesite';
     const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {
@@ -31,7 +31,25 @@
           );
         },
         "lightningLocator"
-      );
+      );*/
     </script>
+
+  <script>
+  $Lightning.use(
+    "c:retailerApplication", // name of the Lightning app
+    function () {
+      // Callback once framework and app loaded
+      $Lightning.createComponent(
+        "c:lwcRetailerApplication", // top-level component of your app
+        {}, // attributes to set on the component when created
+        "lightningLocator", // the DOM location to insert the component
+        function (cmp) {
+          // callback when component is created and active on the page
+        },
+      );
+    },
+    "https://acimacredit--partial.sandbox.my.site.com/vforcesite", // Site endpoint
+  );
+</script>
   
 </html>
