@@ -1,22 +1,17 @@
-<html>
-  <style>
-    body {}
-  </style>
-  
+<html>  
   <script src="https://acimacredit--partial.sandbox.my.site.com/vforcesite/lightning/lightning.out.js"></script>
   
   <div data-lightning-out="true"></div>
   <div id="lightningLocator"></div>
   
   <script>
-    /*const appName = 'c:retailerApplication';
+    const appName = 'c:retailerApplication';
     const componentName = 'c:lwcRetailerApplication';
     const lightningEndpoint = 'https://acimacredit--partial.sandbox.my.site.com/vforcesite';
     const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {
     };
       
-
       $Lightning.use(
         appName,
         function () {
@@ -30,26 +25,8 @@
             }
           );
         },
-        "lightningLocator"
-      );*/
-    </script>
-
-  <script>
-  $Lightning.use(
-    "c:retailerApplication", // name of the Lightning app
-    function () {
-      // Callback once framework and app loaded
-      $Lightning.createComponent(
-        "c:lwcRetailerApplication", // top-level component of your app
-        {}, // attributes to set on the component when created
-        "lightningLocator", // the DOM location to insert the component
-        function (cmp) {
-          // callback when component is created and active on the page
-        },
+        lightningEndpoint
       );
-    },
-    "https://acimacredit--partial.sandbox.my.site.com/vforcesite", // Site endpoint
-  );
-</script>
+    </script>
   
 </html>
